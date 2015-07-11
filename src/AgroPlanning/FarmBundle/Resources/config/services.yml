@@ -1,0 +1,4 @@
+services:
+#    agro_planning_farm.example:
+#        class: AgroPlanning\FarmBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,3 @@
+agro_planning_farm_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: AgroPlanningFarmBundle:Default:index }

@@ -1,0 +1,4 @@
+services:
+#    agro_planning_tag.example:
+#        class: AgroPlanning\TagBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

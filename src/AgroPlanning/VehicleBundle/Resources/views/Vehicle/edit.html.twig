@@ -1,0 +1,60 @@
+{% extends '::layout.html.twig' %}
+
+{% block body -%}
+    <h2>{{ "vehicle" | trans }}</h2>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        {{ "vehicle_edit" | trans }}
+                    </div>
+                </div>
+                <div class="panel-body">
+
+                    {{ form_start(edit_form, {'attr': {'class': 'form-horizontal form-groups-bordered', 'role': 'form'}}) }}
+
+                    <div class="form-group">
+                        {{ form_label(edit_form.name, null, {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                        <div class="col-sm-5">
+                            {{ form_widget(edit_form.name, {'attr': {'class': 'form-control'} }) }}
+                            {{ form_errors(edit_form.name) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(edit_form.make, null, {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                        <div class="col-sm-5">
+                            {{ form_widget(edit_form.make, {'attr': {'class': 'form-control'} }) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(edit_form.model, null, {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                        <div class="col-sm-5">
+                            {{ form_widget(edit_form.model, {'attr': {'class': 'form-control'} }) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(edit_form.customer, null, {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                        <div class="col-sm-5">
+                            {{ form_widget(edit_form.customer, {'attr': {'class': 'form-control'} }) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-5">
+                            {{ form_widget(edit_form.submit, {'attr': {'class': 'btn btn-primary'}}) }}
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="{{ path('vehicle') }}">Back to the list</a>
+                        </div>
+                    </div>
+                    {{ form_end(edit_form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/bootstrap-colorpicker.min.js"></script>
+{% endblock %}

@@ -1,0 +1,32 @@
+<!-- add class "multiple-expanded" to allow multiple submenus to open -->
+<!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+<li>
+    <a href="{{ path('agro_planning_dashboard_homepage') }}">
+        <i class="entypo-gauge"></i>
+        <span class="title">{{ "dashboard" | trans }}</span>
+    </a>
+</li>
+<li>
+    <a href="{{ path('tag') }}">
+        <i class="entypo-tag"></i>
+        <span class="title">{{ "tags" | trans }}</span>
+    </a>
+</li>
+<li>
+    <a href="#">
+        <i class="entypo-layout"></i>
+        <span class="title">{{ "vehicles" | trans }}</span>
+    </a>
+    <ul>
+        <li>
+            <a href="{{ path("vehicle") }}">
+                <span class="title">{{ "vehicles_manage" | trans }}</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="title">{{ "devices_manage" | trans }}</span>
+            </a>
+        </li>
+    </ul>
+</li>

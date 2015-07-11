@@ -1,0 +1,42 @@
+{% extends '::layout.html.twig' %}
+
+{% block body -%}
+    <h3>{{ 'nav.tag' | trans }}</h3>
+
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered table-striped datatable" id="table-2">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Colour</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for entity in entities %}
+                    <tr>
+                        <td>{{ entity.name }}</td>
+                        <td>{{ entity.colour }}</td>
+                        <td>
+                            <a href="{{ path('tag_edit', { 'id': entity.id }) }}" class="btn btn-default btn-sm btn-icon icon-left">
+                                <i class="entypo-pencil"></i>
+                                Edit
+                            </a>
+
+                            <a href="{{ path('tag_delete', { 'id': entity.id }) }}" class="btn btn-danger btn-sm btn-icon icon-left">
+                                <i class="entypo-cancel"></i>
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <a href="{{ path("tag_new") }}" class="btn btn-primary btn-icon icon-left">
+                <i class="entypo-tag"></i>
+                Add Tag
+            </a>
+        </div>
+    </div>
+{% endblock %}
